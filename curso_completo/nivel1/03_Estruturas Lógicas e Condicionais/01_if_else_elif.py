@@ -1,18 +1,30 @@
 """
 IF, ELSE, ELIF
+
+Estrutura condicional.
+Permite que o código siga por caminhos diferentes de acordo com as decisões que são tomadas.
+
+Vale ressaltar que ELIF só existe em PYTHON
 """
 
-resposta = input('Vc entendeu? [S para sim | N para não | T para Talves]: ').lower()
+'''
+Exemplo de aplicação: 
+Inserindo uma nota e testando as seguintes condições.
+Se a nota for maior ou igual a 7 >>> O aluno está APROVADO.
+Se a nota for menor que 7 e maior ou igual a 5 >>> o aluno está em RECUPERAÇÃO.
+Se a nota for menor que 5 >>> o aluno está REPROVADO.
+'''
 
 
-if resposta == 's':
-    print('\n\033[32mOk, eu entendi!\033[m')
-elif resposta == 't':
-    print('Ok, aguardo vc pensar!')
-elif resposta == 'j':
-    print('Qualquer coisa')
+nota = float(input('Digite a nota do aluno: '))
+
+if (nota >= 7):
+    print('Aluno APROVADO')
+
+
+elif (nota >= 5) and (nota < 7):
+    print('Aluno em RECUPERAÇÃO.')
+
+
 else:
-    print('\n\033[31mOk, vamos novamente!\033[m')
-
-
-# Cores em python no terminal >>> print('\033[34m  skdhfkjshfjkdsfhksdjfjk    \033[m')
+    print('Aluno REPROVADO.')

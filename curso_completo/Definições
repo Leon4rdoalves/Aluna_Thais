@@ -96,4 +96,7 @@ for valor in enumerate(frase):
         print(valor)
 
 Resulta >>> cada índice por letra da frase.
+-----------------------------------------------------------------------------------------------------------------------
+
+While >>>
 
