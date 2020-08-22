@@ -1,9 +1,13 @@
-num1 = int(input('Digite o primeiro número: '))
+"""
+Faça um Programa que peça dois números e imprima a soma
+"""
 
-num2 = int(input('Digite o segundo número: '))
+num1 = input('Digite um número: ')
+num2 = input('Digite outro número: ')
 
-print(f'A soma foi: {num1 + num2}')
+soma = num1 + num2
 
+print(f'Somando {num1} e {num2}, temos: {soma}')
 
-
+print(f'Somando {num1} e {num2}, temos: {num1+num2}')
 

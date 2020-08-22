@@ -8,10 +8,10 @@ c. O terceiro elevado ao cubo.
 
 num1 = int(input('Digite um número inteiro: '))
 num2 = int(input('Digite outro número inteiro: '))
-num3 = float(input('Digite um número real: '))
+num3 = float(input('Digite um número decimal: '))
 
-print(f'\nO Resultado da letra A: {(num1 * 2) * (num2 / 2)}')
+a = (num1 * 2) * (num2 / 2)
+b = num1 * 3 + num3
+c = num3 ** 3
 
-print(f'O Resultado da letra B: {num1 * 3 + num3}')
-
-print(f'O Resultado da letra C: {num3 ** 3}')
+print(f'\nResultados:\na) {a}\nb) {b}\nc){c}')

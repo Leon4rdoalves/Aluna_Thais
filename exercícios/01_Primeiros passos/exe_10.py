@@ -15,25 +15,26 @@ d. O salário líquido.
 e. Calcule os descontos e o salário líquido.
 """
 
+salario_hora = float(input('Informe quanto você recebe por hora: '))
+horas_trabalhadas = float(input('Informe quantas horas foram trabalhadas: '))
 
-salario = float(input('Informe quanto você ganha por hora: '))
-
-hora_mes = float(input('Informe quantas horas você trabalhou este mês: '))
-
-
-salario_bruto = salario * hora_mes
+salario_bruto = salario_hora * horas_trabalhadas
 
 imposto_renda = 11 * salario_bruto / 100
 inss = 8 * salario_bruto / 100
 sindicato = 5 * salario_bruto / 100
 
+print('\n')
+print('*' * 40)
+print('Holerite'.center(40))
+print('*' * 40)
 
-print(f'\nSeu Salário Bruto: R${salario_bruto:.2f}')
-print(f'\nVocê pagou ao Imposto de Renda: {imposto_renda:.2f}')
-print(f'Você pagou ao INSS: R${inss:.2f}')
-print(f'Você pagou ao Sindicato: R${sindicato:.2f}')
-print(f'Total de descontos: R${imposto_renda + inss + sindicato:.2f}')
-print(f'\nSeu salário liquido é: R${salario_bruto - imposto_renda - inss - sindicato:.2f}')
-
-
-
+print(f'Salário Bruto: R${salario_bruto:.2f}')
+print('-' * 40)
+print(f'Imposto de Renda: R${imposto_renda:.2f}')
+print(f'INSS: R${inss}')
+print(f'Sindicato: R${sindicato}')
+print('-' * 40)
+print(f'Total de descontos: R${imposto_renda+inss+sindicato:.2f}')
+print('-' * 40)
+print(f'Salário liquido: R${salario_bruto-imposto_renda-inss-sindicato:.2f}')
