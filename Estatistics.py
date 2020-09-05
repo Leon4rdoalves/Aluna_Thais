@@ -1,7 +1,9 @@
 import matplotlib.pyplot as plt
 import numpy as np
+import scipy.stats as st
+import pandas as pd
 
-
+'''
 # Ex01 gráfico
 
 semana = [
@@ -35,6 +37,23 @@ plt.show()
 # Acessando dados em bd excel
 import pandas as pd
 
-file_name = '/home/ebony/git/Alunos Python/Thais'
+
+file_name = '/home/ebony/git/Alunos Python/Thais/babies.xlsx'
 df = pd.read_excel(file_name)
 print(df)
+
+# x1 x2 Age
+
+file_name = '/home/ebony/git/Alunos Python/Thais/babies.xlsx'
+df = pd.read_excel(file_name)
+
+
+df['x1'] # .replace({1: "x1", 2: "x2", 3: "Age"}, inplace=True)
+
+rdf = st.f_oneway(df["Score"][df["Babies"] == "x1"], df["Score"][df["Babies"] == "x2"],df["Score"][df["Babies"] == "Age"])
+
+print("ANOVA Results: ", rdf)
+'''
+
+
+

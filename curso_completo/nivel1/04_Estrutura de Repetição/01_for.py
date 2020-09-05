@@ -26,7 +26,7 @@ Sintaxe >>> for item in iteravel:
 
 for contador in range(11):
     nome = str(input('Digite seu nome: '))
-    tel = int(input('Digite seu telefone: '))
+    tel = int(input('Digite seu telefone: ')) 
     print('*' * 30)
 
 
