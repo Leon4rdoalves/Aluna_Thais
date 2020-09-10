@@ -1,5 +1,10 @@
+'''
 import matplotlib.pyplot as plt
 import numpy as np
+import scipy.stats as st
+from statsmodels.stats.multicomp import pairwise_tukeyhsd
+from statsmodels.stats.multicomp import MultiComparison as multi
+
 
 # Ex01
 
@@ -23,10 +28,16 @@ data = {
     'd': np.random.randn(50)
 }
 
-data['b'] = data['a'] + 10 * np.random.randn(50)
+data['b'] = data['a'] + 10 * np.random.randint(50)
 data['d'] = np.abs(data['d']) * 100
 
 plt.scatter('a', 'b', c='c', s='d', data=data)
 plt.xlabel('Entry a')
 plt.ylabel('Entry b')
 plt.show()
+'''
+
+
+
+
+
