@@ -27,7 +27,7 @@ respostas = []
 status = ''
 
 for pergunta in perguntas:
-    respostas.append(input(pergunta).upper())
+    respostas.append(raw_input(pergunta).upper())
 
 cont = 0
 for resposta in respostas:

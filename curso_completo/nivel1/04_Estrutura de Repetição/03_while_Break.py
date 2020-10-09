@@ -7,3 +7,12 @@ Break >>> Condição de parada de um loop.
 
 """
 
+while True:
+    nome = str(input('Nome: '))
+
+    sair = str(input('Digitar mais um nome? [S / N]: ')).upper()
+
+    if sair == 'N':
+        break
+
+
