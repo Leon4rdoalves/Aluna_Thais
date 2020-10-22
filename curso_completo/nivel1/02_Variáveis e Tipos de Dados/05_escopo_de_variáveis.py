@@ -7,15 +7,11 @@ Variavel Local >>> Pode ser utilizada dentro do local onde foi declarada
 """
 
 
-
 def Cadastro():
-    nome = 'Maria'
+    nome = 'Maria'.upper() # Escopo Local
 
 
 
+nome = 'Leonardo'.upper() # Escopo Global
 
-
-nome = 'Leonardo'.upper()
-
-
-print()
+print(nome)

@@ -39,5 +39,8 @@ plt.show()
 
 
 
+def parrot(talk, hour):
+    return (talk and (hour < 7 or hour > 20))
 
+parrot(False, 5)
 
