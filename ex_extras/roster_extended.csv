@@ -1,4 +1,4 @@
-first,last,age,occupation,height,weight,sedentary,moderate,active
+FIRST NAME,LAST NAME,AGE,OCCUPATION,HEIGHT,WEIGHT,SEDENTARY,MODERATE,ACTIVE
 Anna,Barbara,35,nurse,63,129,,x,
 Catherine,Do,45,physicist,65,135,,,x
 Eric,Frederick,28,teacher,65,140,,x,
@@ -12,4 +12,5 @@ Tracy,Umfreville,42,audiologist,67,156,x,,
 Victoria,Wolfeschleg,38,data analyst,68,158,,x,
 Lucy,Xi,49,professor,69,161,,x,
 Yolanda,Zachary,58,secretary,70,164,x,,
+
 
