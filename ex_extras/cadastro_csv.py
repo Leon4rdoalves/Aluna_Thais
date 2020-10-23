@@ -1,4 +1,4 @@
-from csv import reader, DictWriter, DictReader
+from csv import DictWriter, DictReader, reader
 
 parametro = sedentary = moderate = active = ''
 cont = amount = 0
@@ -14,12 +14,13 @@ else:
 try:
     with open(file) as doc:
         leitor = DictReader(doc)
-        print()
+        print('| FIRST NAME |  LAST NAME   |  AGE  |    OCCUPATION     | HEIGHT  |  WEIGHT | '
+              'SEDENTARY  |  MODERATE  |   ACTIVE   |')
         for linha in leitor:
             print(
-                f"| {linha['FIRST NAME']:<10} | {linha['LAST NAME']:<12} | {linha['AGE']:^5} | {linha['OCCUPATION']:<17}"
-                f" | {linha['HEIGHT']:^7} | {linha['WEIGHT']:^7} | {linha['SEDENTARY']:^10} | {linha['MODERATE']:^10} | "
-                f"{linha['ACTIVE']:^10} |")
+                f"| {linha['FIRST NAME']:<10} | {linha['LAST NAME']:<12} | {linha['AGE']:^5} | "
+                f"{linha['OCCUPATION']:<17} | {linha['HEIGHT']:^7} | {linha['WEIGHT']:^7} | "
+                f"{linha['SEDENTARY']:^10} | {linha['MODERATE']:^10} | {linha['ACTIVE']:^10} |")
 
         parametro = 'a'
         print()
@@ -32,27 +33,17 @@ if condition == "Y":
     amount = int(input('How many more names? '))
 
 with open(file, parametro) as doc:
-    header = ['FIRST NAME',
-              'LAST NAME',
-              'AGE',
-              'OCCUPATION',
-              'HEIGHT',
-              'WEIGHT',
-              'SEDENTARY',
-              'MODERATE',
-              'ACTIVE']
+    header = ['FIRST NAME', 'LAST NAME', 'AGE', 'OCCUPATION', 'HEIGHT', 'WEIGHT',
+              'SEDENTARY', 'MODERATE', 'ACTIVE']
 
     writing = DictWriter(doc, fieldnames=header)
-
     if parametro == 'w':
         writing.writeheader()
-
-    first_name = None
 
     while cont < amount:
         for cont in range(amount):
             print('\n', '{:-^34}'.format(f'Person {cont + 1}'))
-            first_name = input('First Name: ').title()
+            first_name = input('First Name or "EXIT" for closed: ').title()
 
             if first_name != 'Exit':
                 last_name = str(input('Last Name: ')).title()
@@ -70,7 +61,7 @@ with open(file, parametro) as doc:
                     active = 'x'
                 else:
                     sedentary = moderate = active = 'Undefined'
-                print('{:-^34}'.format('\033[32mPerson included\033[m'))
+                print('{:-^34}'.center(30).format('\033[32mPerson included\033[m'))
                 print()
 
                 writing.writerow(
@@ -87,19 +78,11 @@ with open(file, parametro) as doc:
                     }
                 )
 
-            people_list.append(first_name)
-            people_list.append(last_name)
-            people_list.append(age)
-            people_list.append(occupation)
-            people_list.append(height)
-            people_list.append(weight)
-            people_list.append(sedentary)
-            people_list.append(moderate)
-            people_list.append(active)
-
         cont += 1
 
-with open(f'{file_name}.txt', 'w') as data:
-    for i in people_list:
-        data.writelines(str(i))
-print('{:-^50}'.format('\033[32mFile Saved\033[m'))
+with open(file_name + '.txt', 'w') as output_file:
+    with open(file, 'r') as input_file:
+        [output_file.write(" ".join(row) + '\n') for row in reader(input_file)]
+    output_file.close()
+
+print('\n', '{:-^60}'.format('\033[32mFile Saved\033[m'))
