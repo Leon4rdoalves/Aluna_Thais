@@ -1,6 +1,6 @@
 from csv import DictWriter, DictReader, reader
 
-parametro = sedentary = moderate = active = ''
+parameter = sedentary = moderate = active = ''
 cont = amount = 0
 people_list = []
 
@@ -13,31 +13,31 @@ else:
 
 try:
     with open(file) as doc:
-        leitor = DictReader(doc)
+        reading = DictReader(doc)
         print('| FIRST NAME |  LAST NAME   |  AGE  |    OCCUPATION     | HEIGHT  |  WEIGHT | '
               'SEDENTARY  |  MODERATE  |   ACTIVE   |')
-        for linha in leitor:
+        for line in reading:
             print(
-                f"| {linha['FIRST NAME']:<10} | {linha['LAST NAME']:<12} | {linha['AGE']:^5} | "
-                f"{linha['OCCUPATION']:<17} | {linha['HEIGHT']:^7} | {linha['WEIGHT']:^7} | "
-                f"{linha['SEDENTARY']:^10} | {linha['MODERATE']:^10} | {linha['ACTIVE']:^10} |")
+                f"| {line['FIRST NAME']:<10} | {line['LAST NAME']:<12} | {line['AGE']:^5} | "
+                f"{line['OCCUPATION']:<17} | {line['HEIGHT']:^7} | {line['WEIGHT']:^7} | "
+                f"{line['SEDENTARY']:^10} | {line['MODERATE']:^10} | {line['ACTIVE']:^10} |")
 
-        parametro = 'a'
+        parameter = 'a'
         print()
 
 except FileNotFoundError:
-    parametro = 'w'
+    parameter = 'w'
 
 condition = str(input(f'Would you like to enter additional names? (Y/N): ')).upper()
 if condition == "Y":
     amount = int(input('How many more names? '))
 
-with open(file, parametro) as doc:
+with open(file, parameter) as doc:
     header = ['FIRST NAME', 'LAST NAME', 'AGE', 'OCCUPATION', 'HEIGHT', 'WEIGHT',
               'SEDENTARY', 'MODERATE', 'ACTIVE']
 
     writing = DictWriter(doc, fieldnames=header)
-    if parametro == 'w':
+    if parameter == 'w':
         writing.writeheader()
 
     while cont < amount:
@@ -77,7 +77,6 @@ with open(file, parametro) as doc:
                         "ACTIVE": active
                     }
                 )
-
         cont += 1
 
 with open(file_name + '.txt', 'w') as output_file:
