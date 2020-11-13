@@ -90,4 +90,3 @@ print(f'\033[32mAluno(a) com maior nota: {nome_maior}, nota: {maior}')
 print(f'\033[31mAluno(a) com menor nota: {nome_menor}, nota: {menor}')
 
 
-

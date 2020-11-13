@@ -1,46 +1,147 @@
+"""
+Listas
+Em outras linguagens é conhecida como Array, Vetor ou matriz...
+
+* Dinâmica >>> Não possui tamanho fixo e não preciso informar este tamanho.
+* Aceita qualquer tipo de dado.
+
+* Sintaxe:
+        [] ou list()
+
+* SORT >>> Ordena os dados de uma lista.
+* REVERSE >>> Inverte a lista.
+* APPENDD >>> Atribui a lista, um elemento por vez. Podendo ser inclusive outra lista...
+* INSERT >>> Atribui vários elementos, integrando à lista original.
+* POP >>> Remove um valor da lista por índice.
+* REMOVE >>> Remove um valor da lista por valor.
+* ENUMERATE >>> Acesso à chave e valor.
+* CLEAR >>> Limpa a lista.
+
+** LIMITAÇÃO >>> Busca deve ser feita sempre por índices...
+"""
 '''
-import matplotlib.pyplot as plt
-import numpy as np
-import scipy.stats as st
-from statsmodels.stats.multicomp import pairwise_tukeyhsd
-from statsmodels.stats.multicomp import MultiComparison as multi
+lista = []
+lista1 = list()
+
+lista2 = ['leo', 10, 10.8, True]
+
+print(lista2)
 
 
-# Ex01
+numeros = [0,1,2,3,4]
 
-semana = [
-    ['Seg', 'Ter', 'Qua', 'Qui', 'Sex', 'Sab', 'Dom'],
-    [10, 15.89, 30, 58.69, 14, 250, 899.59]
-]
+numeros1 = [range(101)]
+numero2 = list(range(101))
 
-plt.plot(semana[0], semana[1], 'r')
-plt.xlabel('Dias da Semana.')
-plt.ylabel('Dinheiro gasto.')
-plt.show()
+print(numeros1)
+print(numero2)
 
-# ----------------------------------------------
 
-# Ex02
+nome = ['Leonardo', 'maria']
+sobrenome = ['Alves']
 
-data = {
-    'a': np.arange(50),
-    'c': np.random.randint(0, 50, 50),
-    'd': np.random.randn(50)
-}
+nome_completo = [nome, sobrenome]
 
-data['b'] = data['a'] + 10 * np.random.randint(50)
-data['d'] = np.abs(data['d']) * 100
 
-plt.scatter('a', 'b', c='c', s='d', data=data)
-plt.xlabel('Entry a')
-plt.ylabel('Entry b')
-plt.show()
+#print(nome_completo[0][1])
+
+print(nome[1])
+
+
+frase = """Cê tá achando que vai
+Não vai me esquecer não
+Eu ainda tô aí
+Dentro do seu coração
+Na foto que cê não apagou
+Na legenda que falava de amor
+Escuta teu coração, por favor
+Se não sou eu, vai ser quem
+O amor teu?
+Só você não percebeu
+Que só tem eu
+Se não sou eu, vai ser quem
+O amor teu?
+Só você não percebeu
+Que só tem eu
+Volta, pelo amor de Deus
+Na foto que cê não apagou
+Na legenda que falava dе amor
+Escuta seu coração, por favor
+Se não sou eu, vai sеr quem
+O amor teu?
+Só você não percebeu
+Que só tem eu
+Se não sou eu, vai ser quem
+O amor teu?
+Só você não percebeu
+Que só tem eu
+Volta, pelo amor de Deus
+Você sabe que eu te amo
+Ninguém te ama mais que eu
+Pode tentar me esquecer
+Mas o teu coração é meu
+Nem o brilho das estrelas
+Nem a Lua, nem o mar
+Nada disso se compara
+Ao amor que sei te dar
+E no toque do beat, é o Rafinha RSQ
+Volta, pelo amor de Deus"""
+
+palavras = frase.split()
+print(palavras.count('Que'))
 '''
 
 
+numeros = [10,20,30,40]
 
-def parrot(talk, hour):
-    return (talk and (hour < 7 or hour > 20))
+# numeros.sort(reverse=True) # colocando em ordem
 
-parrot(False, 5)
+#numeros.sort()  # colocando em ordem crescente
+#numeros.reverse()  # invertendo a ordem para decrescente
+
+numeros.append(50)
+numeros.append(60)
+numeros.append(70)
+numeros.append(80)
+numeros.append('Teste1')
+
+
+numeros.insert(0, 0)
+numeros.insert(-1, 90)
+numeros.insert(-1, 'Teste')
+
+#numeros.sort()
+
+
+numeros.pop(1)
+
+numeros.remove(20)
+numeros.remove('Teste')
+
+
+
+
+
+print(numeros)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
