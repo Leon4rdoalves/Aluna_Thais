@@ -47,8 +47,7 @@ while cont1 < 11:
     cont1 += 1
 
 
-# Validando nome, enquanto não for númerico, o programa
-# será executado...
+# Validando nome, enquanto não for númerico, o programa será executado...
 nome = ''
 
 while not nome.isnumeric():

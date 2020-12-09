@@ -89,10 +89,9 @@ Volta, pelo amor de Deus"""
 
 palavras = frase.split()
 print(palavras.count('Que'))
-'''
 
 
-numeros = [10,20,30,40]
+numeros = [10, 20, 30, 40, 50]
 
 # numeros.sort(reverse=True) # colocando em ordem
 
@@ -118,23 +117,82 @@ numeros.pop(1)
 numeros.remove(20)
 numeros.remove('Teste')
 
+print(numeros)
 
 
+numeros = []
 
+for n in range(1, 4):
+    #num = int(input(f'{n}º Número: '))
+    #numeros.append(num)
 
+    numeros.append(str(input(f'{n}º Número: ')))
+    
 print(numeros)
 
 
 
 
+from time import sleep
+nomes = []
+
+for n in range(3):
+    nomes.append(str(input(f'{n+1}º Nome: ')).title())
+
+
+
+print()
+for nome in nomes:
+    print(f'Muito prazer, {nome}.')
+    sleep(2)
+
+
+
+a = [1, 2, 3]
+
+b = [4, 5, 6]
+
+c = a + b
+
+print(type(c))
+print(c)
+
+
+
+a = [1, 2, 3]
+
+# b = a
+b = a[:]
+
+b.append(4)
+b.append(5)
+
+
+print('Lista A: ', a)
+print('Lista B: ', b)
 
 
 
 
+semana = []
+dinheiro = []
+dias = ('Segunda', 'Terça', 'Quarta', 'Quinta', 'Sexta', 'Sábado', 'Domingo')
 
 
+for dia in dias:
+    dinheiro.append(float(input(f'valor gasto na {dia}: ')))
+
+semana.append(dias[:])
+semana.append(dinheiro[:])
 
 
+print()
+print(semana)
+print()
+print(semana[0][0])
+print(semana[1][0])
+
+'''
 
 
 
