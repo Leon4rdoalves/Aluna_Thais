@@ -1,2 +1,2 @@
-# Thais
-Exercícios e aulas 
+# Curso Python Nível 1
+## Thais
